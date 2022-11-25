@@ -1,0 +1,139 @@
+:root {
+
+    --background-color: #1F1F20;
+    --color-primary: #2B4C7E;
+    --color-secundary: #567EBB;
+    --color-third: #465C7D;
+    --color-four: #DCE0E6;
+
+}
+
+* {
+
+    font-family: "Caviar Dreams", sans-serif;
+
+}
+
+body {
+
+    background-color: var(--background-color);
+    color: var(--color-four);
+
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+header img {
+
+    height: 100px;
+    opacity: 0.8;
+
+    transition: transform 100ms, opacity 100ms ease-in-out;
+
+}
+
+header img:hover {
+
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+header nav.menu {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+header nav.menu a {
+
+    position: relative;
+    text-decoration: none;
+    font-family: "Caviar Dreams", sans-serif;
+    color: var(--color-four);
+    font-size: 1.75rem; /*font-size: 1.25rem;*/
+    letter-spacing: 0.5px;
+    padding: 0 20px;
+    margin-top: 20px;
+
+}
+
+header nav.menu a:after {
+
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+
+    transition: 500ms;
+
+}
+
+header nav.menu a.activated:after {
+
+    content: "";
+    position: absolute;
+    background-color: #567EBB;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+
+    transition: 500ms;
+
+}
+
+header nav.menu a:hover {
+
+    color: white;
+
+}
+
+header nav.menu a:hover:after {
+
+    width: 100%;
+
+}
+
+header nav.menu a.activated {
+
+    color: #567EBB;
+
+}
+
+@media(min-width:500px) {
+    
+    header nav.menu {
+
+        flex-direction: row;
+    
+    }
+
+    header nav.menu a {
+
+        position: relative;
+        text-decoration: none;
+        font-family: "Caviar Dreams", sans-serif;
+        color: var(--color-four);
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        padding: 0 20px;
+    
+    }
+
+}
